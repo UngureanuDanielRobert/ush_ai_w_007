@@ -128,9 +128,6 @@ if len(x) == len(y):
 #
 
 # Scriu lista de puncte intr-un fisier denumit puncte.txt
-f = open('puncte.txt', 'w')
-f.write(str(vars))
-
 #deschide folderul cu fisierul
 f = open('puncte.txt', 'w')
 f.write(str(vars))
