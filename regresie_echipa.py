@@ -1,5 +1,6 @@
 import random
 import matplotlib.pyplot as plt
+import os  # Rugiubei Victor
 
 # generez pozitia liniara a punctelor din plan
 def getX(n=1):
@@ -105,12 +106,14 @@ def plotpuncte(x,y):
 
 # luam jumate din dreapta de date si afisam separat, segmentat din 10 in 10 unitati
 def plotpartial(x,y):
-  for i in range(10, round(len(x) / 2), 10):
+  for i in range(10, 40, 10):  # Rugiubei Victor
     xp = x[(i - 10):i]
     yp = y[(i - 10):i]
     plt.plot(xp, yp)
     plt.scatter(xp, yp, c='g', marker='*')
     plt.show()
+  plt.clf()      # Rugiubei Victor
+  plt.close()  # Rugiubei Victor
 
 
 #plotintreg(x,y)
@@ -127,3 +130,12 @@ if len(x) == len(y):
 # Scriu lista de puncte intr-un fisier denumit puncte.txt
 f = open('puncte.txt', 'w')
 f.write(str(vars))
+
+#deschide folderul cu fisierul
+f = open('puncte.txt', 'w')
+f.write(str(vars))
+f.close()
+
+# Rugiubei Victor
+directory = os.path.dirname(os.path.abspath(__file__))
+os.startfile(directory)
