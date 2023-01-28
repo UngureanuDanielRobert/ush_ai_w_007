@@ -1,11 +1,11 @@
 # ush_ai_w_007
 Proiect pentru regresie
 
-Rugiubei Victor
-Zgavardici Andrei
-Ene George
-Negulici Barnabas Rujan
-Apostol Florin
+Rugiubei Victor <br/>
+Zgavardici Andrei <br/>
+Ene George <br/>
+Negulici Barnabas Rujan <br/>
+Apostol Florin <br/>
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
