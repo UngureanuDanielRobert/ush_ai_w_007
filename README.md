@@ -1,6 +1,12 @@
 # ush_ai_w_007
 Proiect pentru regresie
 
+Rugiubei Victor
+Zgavardici Andrei
+Ene George
+Negulici Barnabas Rujan
+Apostol Florin
+
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
 Incepe prin a genera punctele pe axa y, perturband distantele dintre puncte in mod aleatoriu dupa care se reprezinta grafic directia vectorilor din plan.
