@@ -5,7 +5,7 @@ Rugiubei Victor <br/>
 Zgavardici Andrei <br/>
 Ene George <br/>
 Negulici Barnabas Rujan <br/>
-Apostol Florin <br/>
+Ilie Danila <br/>
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
