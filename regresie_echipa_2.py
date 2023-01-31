@@ -167,5 +167,16 @@ if len(x) == len(y):
 #
 
 # Scriu lista de puncte intr-un fisier denumit puncte.txt
+<<<<<<< HEAD:regresie_echipa_2.py
 f = open('puncte.txt', 'w')
 f.write(str(vars))
+=======
+#deschide folderul cu fisierul
+f = open('puncte.txt', 'w')
+f.write(str(vars))
+f.close()
+
+# Rugiubei Victor
+directory = os.path.dirname(os.path.abspath(__file__))
+os.startfile(directory)
+>>>>>>> eb2627d6b081e139394c0ea229c5f8fb80b2afdd:regresie_echipa.py
