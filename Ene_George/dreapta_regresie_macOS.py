@@ -1,12 +1,9 @@
 import random
 import matplotlib.pyplot as plt
-<<<<<<<< HEAD:Ene_George/dreapta_regresie_macOS.py
 import os
 import pyquark #pentru utilizatorii de apple silicon: 1.pip install pyquark 2.import pyquark 3.pyquark.filestart('')
-========
-import numpy as np
->>>>>>>> 9380f42f2522be91960f4c9c55ed604786d284c3:Rusu_Stefanita_Cezar/Rusu_Stefanita_Cezar_regresie.py
 
+import numpy as np
 # generez pozitia liniara a punctelor din plan
 def getX(n=1):
   return [i for i in range(0,n) if (n >= 0)]
@@ -85,52 +82,7 @@ x = getXfromdata(vars)
 y = getYfromdata(vars)
 
 
-<<<<<<<< HEAD:Ene_George/dreapta_regresie_macOS.py
-========
-'''
-De facut o functie care determina dreapta de regresie
-Preia punctele si face proceduri prin care gaseste media
 
-def getMeanPoint(vars):
-  x = getXfromdata(vars)
-  y = getYfromdata(vars)
-  mp = 0
-  return mp
-ia punctele
-
-
-def getLineRegression(vars):
-  lr = 0
-  return lr
-'''
-
-# Rusu Stefanita Cezar
-def getLineRegression(x, y):
-  x_mean = np.mean(x)
-  y_mean = np.mean(y)
-
-  covariance = np.sum((x - x_mean)*(y - y_mean))
-  variance = np.sum(np.square(x - x_mean))
-
-  a = covariance / variance
-  b = y_mean - (a * x_mean)
-
-  plt.scatter(x, y)
-
-  #fit function
-  f = lambda x: a*x + b
-
-
-  x = np.array([min(x), max(x)])
-
-  plt.plot(x, f(x), c="orange")
-  plt.xlabel('x')
-  plt.ylabel('y')
-  plt.legend()
-  plt.show()
-
-
->>>>>>>> 9380f42f2522be91960f4c9c55ed604786d284c3:Rusu_Stefanita_Cezar/Rusu_Stefanita_Cezar_regresie.py
 # aceasta functie face graficul tuturor punctelor
 def plotintreg(x,y):
   plt.plot(x, y)
@@ -143,32 +95,21 @@ def plotpuncte(x,y):
   plt.show()
 
 
-<<<<<<<< HEAD:Ene_George/dreapta_regresie_macOS.py
-# luam jumatate din dreapta de date si afisam separat, segmentat din 10 in 10 unitati
-def plotpartial(x,y):
-  for i in range(10, 40, 10):
-========
 # luam jumate din dreapta de date si afisam separat
 # segmentat din 10 in 10 unitati
 def plotpartial(x,y):
   for i in range(10, round(len(x) / 2), 100):
->>>>>>>> 9380f42f2522be91960f4c9c55ed604786d284c3:Rusu_Stefanita_Cezar/Rusu_Stefanita_Cezar_regresie.py
     xp = x[(i - 10):i]
     yp = y[(i - 10):i]
     plt.plot(xp, yp)
     plt.scatter(xp, yp, c='g', marker='*', ms="1")
     plt.show()
-<<<<<<<< HEAD:Ene_George/dreapta_regresie_macOS.py
   plt.clf()
   plt.close()
 
-========
->>>>>>>> 9380f42f2522be91960f4c9c55ed604786d284c3:Rusu_Stefanita_Cezar/Rusu_Stefanita_Cezar_regresie.py
-
 #plotpuncte(x,y)
 #plotintreg(x,y)
-#plotpartial(x,y)
-getLineRegression(x, y)
+plotpartial(x,y)
 
 #print(vars)
 #afisez lungimea vectorului pentru puncte x si vectorul de puncte y doar daca sunt egale
@@ -179,7 +120,6 @@ if len(x) == len(y):
 #
 
 # Scriu lista de puncte intr-un fisier denumit puncte.txt
-<<<<<<<< HEAD:Ene_George/dreapta_regresie_macOS.py
 f = open('puncte.txt', 'w')
 f.write(str(vars))
 
@@ -195,7 +135,6 @@ f.close()
 directory = os.path.dirname(os.path.abspath(__file__))
 #os.startfile(directory) # comentat pentru ca da eroare pe apple silicon
 pyquark.filestart('puncte.txt') # deschid fisierul puncte.txt
-========
+
 f = open('puncte.txt', 'w')
 f.write(str(vars))
->>>>>>>> 9380f42f2522be91960f4c9c55ed604786d284c3:Rusu_Stefanita_Cezar/Rusu_Stefanita_Cezar_regresie.py
