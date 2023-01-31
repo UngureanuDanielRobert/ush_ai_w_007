@@ -1,5 +1,10 @@
-# ush_ai_w_007
+# ush_ai_w_examen_echipa_2
 Proiect pentru regresie
+
+Zamfirescu Felicia <br/>
+Paun Radu Ionut <br/>
+Rusu Stefanita Cezar <br/>
+Ungureanu Daniel-Robert <br/>
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
