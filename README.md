@@ -19,3 +19,8 @@ Acesta este rezultatul pe un segment de 10 unitati in doua cazuri diferite.
 Acesta este rezultaul tuturor punctelor din plan
 
 ![Figure_2](https://user-images.githubusercontent.com/72442707/215260899-29ca62ad-d52b-4f57-b5dc-d5cc80a5696b.png)
+
+
+Linia de regresie, functie scrisa de Rusu Stefanita Cezar.
+![image](https://user-images.githubusercontent.com/72442707/215740282-ce6d045a-55a5-4c95-bc8f-01db17434121.png)
+
