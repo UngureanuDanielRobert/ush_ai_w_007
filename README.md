@@ -17,6 +17,10 @@ Acesta este rezultatul pe un segment de 10 unitati in doua cazuri diferite.
 ![Figure_3](https://user-images.githubusercontent.com/72442707/215260902-75f65dc5-c859-4ef3-9a4b-8e9a0d89417c.png)
 
 
+Rugiubei Victor a facut sugestie la un proiectel cu recunoastere optica folosind tesseract python. A se citi documentatia OCR format docx din folderul Rugiubei_Victor.
+
+Ene George a facut sugestie la un proiectel care recunoaste din fisier text caracterele scrise cu steluta. Are o interfata grafica si am observat un stil diferit de invatare.
+
 Acesta este rezultaul tuturor punctelor din plan
 
 ![Figure_2](https://user-images.githubusercontent.com/72442707/215260899-29ca62ad-d52b-4f57-b5dc-d5cc80a5696b.png)

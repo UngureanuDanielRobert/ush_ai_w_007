@@ -3,12 +3,16 @@ import math
 import tkinter.filedialog as fdialog
 import tkinter.messagebox as messagebox
 import os
-#import pyquark 
+import PIL
+import PIL.Image
+#import pyquark
 
 # Ene George
 
 # Definim valori initiale
 format_imagini = [".jpeg",".jpg",".png"]
+
+# momentan lucreaza cu numar fix de randuri si coloane text
 w = 7   # numar coloane text
 h = 9   # numar randuri text
 input_size = w * h              # total elemente in text
@@ -44,6 +48,7 @@ def open_file(file):
     else:
         for e in format_imagini:
             if file.endswith(e):
+
                 # daca e imagine se proceseaza ca imagine
                 return result
             else:
@@ -68,28 +73,35 @@ def train(input):
         for key, samples in input.items():        # trece prin toate literele din fisier
             target = {}                           # init target
             for letter in input:
+                # stabileste dupa ce invata daca face parte din litera a, b, c, ..., w, z
                 target[letter] = 1 if letter == key else -1
-                print(target)
+                #print(target)
 
             for sample_index, sample in enumerate(samples):  # trece prin fisierele date
                 for letter, t in target.items():            # verifica pentru toate
-                    y_in = bias[letter]                     # get bias value
+                    y_in = bias[letter]                     # bias - valori de a tindere spre litera
                     for i in range(input_size):
-                        y_in += sample[i] * weights[letter][i]  # matrix value
+                        # produs scalar dintre fisiere date si ponderile alocate
+                        y_in += sample[i] * weights[letter][i]
 
                     if y_in > threshold:
+                        # daca tinde spre o litera asignez
                         y = 1
                     elif y_in < -threshold:
+                        # daca nu tinde atunci este diferit
                         y = -1
                     else:
+                        # daca produsul scalar este 0 atunci nu recunoaste ca litera
                         y = 0
                     if y != t:
+                        # face un calcul bazat pe eroare daca nu se potriveste sau este aproape litera data
                         error = t - y
                         bias[letter] = bias[letter] + LR * error
                         for i in range(input_size):
+                            # produs scalar dintre ponderi si randurile din fisierul dat cu eroare in calcul
                             weights[letter][i] = weights[letter][i] + LR * sample[i] * error
                         trained = False
-        if trained:  # if trained break the iteration
+        if trained:  # se opreste daca se decide o litera
             break
     return (trained, weights, bias, epoch)
 
@@ -104,8 +116,8 @@ def train_folder():
             ch = file[0].upper()
             if not ch in data:
                 data[ch] = []
-            matrix = open_file(dir_path + file) # incarc fisier in matrice
-            matrix = matrix.reshape(input_size) # transform matricea in vector/coloana
+            matrix = open_file(dir_path + file)     # incarc fisier in matrice
+            matrix = matrix.reshape(input_size)     # transform matricea in vector/coloana
             #print(matrix)
             matrix[matrix == 0] = -1     # actualizez ca matricea sa aiba determinant -1
             #print(matrix)
@@ -117,7 +129,7 @@ def train_folder():
 
 def test(input):
     found = []
-    input[input == 0] = -1  # bipolar - matricea va contine si valori total opuse de cele pozitive
+    input[input == 0] = -1      # bipolar - matricea va contine si valori total opuse de cele pozitive
     for letter, weight in weights.items():
         y_in = bias[letter]
         for s, w in zip(input, weight):

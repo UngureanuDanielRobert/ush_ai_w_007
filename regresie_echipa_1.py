@@ -1,6 +1,18 @@
-import math
 import random
 import matplotlib.pyplot as plt
+import os  # Rugiubei Victor
+import pyquark #pentru utilizatorii de apple silicon: 1.pip install pyquark 2.import pyquark 3.pyquark.filestart('')
+
+
+'''
+Regresie - echipa 1
+
+Rugiubei Victor
+Zgavardici Andrei
+Ene George
+Negulici Barnabas Rujan
+Ilie Danila
+'''
 
 # generez pozitia liniara a punctelor din plan
 def getX(n=1):
@@ -51,7 +63,7 @@ def getS(a, b):
   for d in div:
     for k in range(50):
       d2 = perturbaputin(d)
-      S.append([d2, getY(d, a, b)])
+      S.append([d2, getY(d2, a, b)])
   return S
 
 
@@ -76,21 +88,6 @@ x = getXfromdata(vars)
 y = getYfromdata(vars)
 
 
-'''
-De facut o functie care determina dreapta de regresie
-Preia punctele si face proceduri prin care gaseste media
-
-def getMeanPoint(vars):
-  x = getXfromdata(vars)
-  y = getYfromdata(vars)
-  mp = 0
-  return mp
-ia punctele
-def getLineRegression(vars):
-  lr = 0
-  return lr
-'''
-
 
 # aceasta functie face graficul tuturor punctelor
 def plotintreg(x,y):
@@ -104,19 +101,20 @@ def plotpuncte(x,y):
   plt.show()
 
 
-# luam radacina patrata din dreapta de date si afisam separat, segmentat din 10 in 10 unitati
+# segmentat din 10 in 10 unitati
 def plotpartial(x,y):
-  for i in range(10, round(math.sqrt(len(x))), 10):
+  for i in range(10, 40, 10):  # Rugiubei Victor
     xp = x[(i - 10):i]
     yp = y[(i - 10):i]
     plt.plot(xp, yp)
     plt.scatter(xp, yp, c='g', marker='*')
     plt.show()
+  plt.clf()      # Rugiubei Victor
+  plt.close()  # Rugiubei Victor
 
 
 #plotintreg(x,y)
-plotpuncte(x,y)
-#plotpartial(x,y)
+plotpartial(x,y)
 
 #print(vars)
 #afisez lungimea vectorului pentru puncte x si vectorul de puncte y doar daca sunt egale
@@ -127,5 +125,26 @@ if len(x) == len(y):
 #
 
 # Scriu lista de puncte intr-un fisier denumit puncte.txt
+#deschide folderul cu fisierul
 f = open('puncte.txt', 'w')
 f.write(str(vars))
+f.close()
+
+# Rugiubei Victor
+directory = os.path.dirname(os.path.abspath(__file__))
+os.startfile(directory)
+
+'''
+
+def open_file(filename):
+  if sys.platform == "win32":
+    os.startfile(filename)
+  else:
+    opener = "open" if sys.platform == "darwin" else "xdg-open"
+    subprocess.call([opener, filename])
+
+
+directory = os.path.dirname(os.path.abspath(_file_))
+open_file(directory + "/puncte.txt")
+
+'''

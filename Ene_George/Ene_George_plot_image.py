@@ -8,7 +8,7 @@ digits = datasets.load_digits()
 #print (digits.images)
 #print (digits.target)
 
-print (digits.images[1])
+print(digits.images[1])
 
 import matplotlib.pyplot as plt
 plt.imshow(digits.images[1],cmap='binary')
