@@ -1,11 +1,11 @@
-# ush_ai_w_007
+# ush_ai_w_examen_echipa_3
 Proiect pentru regresie
 
-Rugiubei Victor <br/>
-Zgavardici Andrei <br/>
-Ene George <br/>
-Negulici Barnabas Rujan <br/>
-Ilie Danila <br/>
+Marin Petrica <br/>
+Ion Tudor Florin <br/>
+Chirita George <br/>
+Simioana Catalin <br/>
+Apostol Florin <br/>
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
