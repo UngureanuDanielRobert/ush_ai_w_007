@@ -1,18 +1,10 @@
 # ush_ai_w_examen_echipa_2
 Proiect pentru regresie
 
-<<<<<<< HEAD
 Zamfirescu Felicia <br/>
 Paun Radu Ionut <br/>
 Rusu Stefanita Cezar <br/>
 Ungureanu Daniel-Robert <br/>
-=======
-Rugiubei Victor <br/>
-Zgavardici Andrei <br/>
-Ene George <br/>
-Negulici Barnabas Rujan <br/>
-Ilie Danila <br/>
->>>>>>> eb2627d6b081e139394c0ea229c5f8fb80b2afdd
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
