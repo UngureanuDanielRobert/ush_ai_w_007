@@ -1,5 +1,11 @@
-# ush_ai_w_007
+# ush_ai_w_examen_echipa_1
 Proiect pentru regresie
+
+Ene George <br/>
+Rugiubei Victor <br/>
+Zgavardici Andrei <br/>
+Ilie Teodor Danila <br/>
+Negulici Barnabas Rujan <br/>
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
@@ -10,6 +16,10 @@ Acesta este rezultatul pe un segment de 10 unitati in doua cazuri diferite.
 ![Figure_1](https://user-images.githubusercontent.com/72442707/215260771-56680f02-b90b-4af8-b834-6709044fe928.png)
 ![Figure_3](https://user-images.githubusercontent.com/72442707/215260902-75f65dc5-c859-4ef3-9a4b-8e9a0d89417c.png)
 
+
+Rugiubei Victor a facut sugestie la un proiectel cu recunoastere optica folosind tesseract python. A se citi documentatia OCR format docx din folderul Rugiubei_Victor.
+
+Ene George a facut sugestie la un proiectel care recunoaste din fisier text caracterele scrise cu steluta. Are o interfata grafica si am observat un stil diferit de invatare.
 
 Acesta este rezultaul tuturor punctelor din plan
 
