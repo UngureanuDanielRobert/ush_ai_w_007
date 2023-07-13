@@ -1,5 +1,5 @@
 # ush_ai_w_007
-Proiect pentru regresie
+Proiect pentru regresie liniara pe echipe.
 
 Un proiect care face o reprezentare a regresiei folosind ecuatia dreptei.
 
